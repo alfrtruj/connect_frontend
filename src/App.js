@@ -1,8 +1,12 @@
 import './App.css';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <h1>myConnect</h1>
+    <div className="App">
+      <Navbar />
+      <h1>myConnect</h1>
+    </div>    
   );
 }
 
