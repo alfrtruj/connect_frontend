@@ -1,23 +1,26 @@
-import Dashboard from './components/Dashboard';
-import Navbar from './components/Navbar';
-import Sidebar from './components/Sidebar';
+import Home from './components/Home';
+import Access from './components/Access';
+import Ingest from './components/Ingest';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 
 function App() {
   return (
-    <div className="App">      
-      <div className="content">
-        <Navbar />  
-        <div className="vertical-sections">
-          <div className="sidebar">
-            <Sidebar /> 
-          </div> 
-          <div className="content-section">
-            <Dashboard />  
-          </div> 
-        </div>     
-           
-      </div>      
-    </div>    
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/access">
+            <Access />
+          </Route>
+          <Route path="/ingest">
+            <Ingest />
+          </Route>
+        </Switch>        
+      </div>
+    </Router>    
   );
 }
 

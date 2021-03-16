@@ -1,7 +1,10 @@
+import { Link } from 'react-router-dom';
 import logo from './connect_logo.png';
 import react_logo from './react_logo.png';
 
+
 const Navbar = () => {
+    
     return (
         <nav className="navbar">
             <div>
@@ -11,25 +14,24 @@ const Navbar = () => {
                 <img src={react_logo} className="react_logo" alt="React logo"/>
             </div>
             <div className="links">
-                <ul>
+                <ul>   
                     <li>
-                        <a className="overview" href="/">Overview</a>
+                        <Link to="/">Overview</Link>
                     </li>
                     <li>
-                        <a href="/ingest">Ingest</a>
+                        <Link to="/ingest">Ingest</Link>
                     </li>
                     <li>
-                        <a href="/Access">Access</a>
+                        <Link to="/Access">Access</Link>
                     </li>
                     <li>
-                        <a href="/settings">Settings</a>
+                        <Link to="/">Settings</Link>
                     </li>
                     <li>
-                        <a href="/logout">Logout</a>
+                        <Link to="/">Logout</Link>
                     </li>
                 </ul>
             </div>
-
         </nav>
       );
 }

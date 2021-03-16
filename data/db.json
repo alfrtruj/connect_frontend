@@ -1,0 +1,26 @@
+{
+    "aips": [
+        { 
+            "id": 1, 
+            "package_name": "Vintage houses", 
+            "size": "12 GB", 
+            "date": "01.03.2020", 
+            "files": 15 
+        },
+        { 
+            "id": 2, 
+            "package_name": "Photos 1920", 
+            "size": "34 GB", 
+            "date": "15.06.2017", 
+            "files": 149
+        },
+        { 
+            "id": 3, 
+            "package_name": "Space 2001", 
+            "size": "3 GB", 
+            "date": "24.05.2021", 
+            "files": 4            
+        }
+    ]
+}
+

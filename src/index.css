@@ -12,17 +12,19 @@ body {
 .navbar {
   display: flex;
   background-color: #fff;
-  padding: 20px 0 0 0;
+  padding: 10px 0 0 0;
   min-width: 100%;
 }
 nav .logo {
   margin-left: 10px;
   padding-left: 20px;
+  padding-bottom: 30px;
 }
 nav .react_logo {
-  width: 50px;
+  width: 70px;
   height: auto;
   padding-left: 20px;
+  padding-bottom: 30px;
 }
 .navbar ul {
   display: flex;
@@ -30,7 +32,7 @@ nav .react_logo {
 }
 nav .links { 
   flex-grow: 1;
-  padding: 10px 16px 10px 50px;  
+  padding: 40px 16px 20px 50px;  
   text-align: right;
   font-size: .9rem; 
   font-weight: bold; 
@@ -44,10 +46,6 @@ nav .links {
 .links a:hover {
   color: #cc5d33;
 }
-.links .overview {
-  color: #cc5d33;
-}
-
 
 
 .vertical-sections {
@@ -63,7 +61,8 @@ nav .links {
   font-size: 0.7rem; 
   position: relative;
   flex-grow: 1;
-  min-width: 150px;
+  min-width: 200px;
+  max-width: 200px;
 }
 .sidebar_column {
   display: flex;
@@ -94,18 +93,10 @@ nav ul{
   width: 30px;
   height: auto;
 }
-.dashboard {
-  padding: 0 0 0 10px;
-  text-decoration: none;
+.row-options .link {
   color: #fff;
-}
-.option1{
-  background-color: #cc5d33;
-}
-.reports {
-  padding: 0 0 0 10px;
   text-decoration: none;
-  color: #fff;
+  padding-left: 10px;  
 }
 .welcome {
   width: 100%;
@@ -165,6 +156,8 @@ nav ul{
   padding-right: 15px;
   position: relative;
   box-sizing: border-box;
+  background-color: #e8e8e8;
+  border: 0px;
 }
 .card-items {
   display: flex;
@@ -221,6 +214,38 @@ nav ul{
   height: 40vh;
   background-color: rgb(190, 85, 73);
   padding: 15px 10px;
+}
+.aip_table {
+ padding: 0;
+}
+table {
+  width: 100%;
+  font-size: 0.8rem;
+}
+.name {
+border-bottom: 1px solid #dddddd;
+text-align: left;
+padding: 8px;
+}  
+.other_columns {
+  border-bottom: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}  
+.btn-danger {
+  font-size: 0.8rem;
+  margin-right: 10px;
+ }
+.btn-info {
+  font-size: 0.8rem;
+}
+.column_headers {
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-bottom: 1px solid grey;
+  background-color: rgb(250, 246, 246);
+  padding: 8px;
+  font-weight: 600;
 }
 
 
