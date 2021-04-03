@@ -1,11 +1,10 @@
-import react_icon from './react_logo.png';
 
-const Header = ( {title, description} ) => {
+const Header = ( {title, description, icon } ) => {
     return ( 
         <div className="page-header">
             <div className="title-row">
-                <div className="title">
-                    <img src={react_icon} className="react_ic" alt="React logo"/>
+                <div className="title">                    
+                    <i class={icon}></i>
                     <p className="title-text">{ title }</p>                        
                 </div>                
             </div>

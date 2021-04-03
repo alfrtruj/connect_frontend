@@ -19,16 +19,16 @@ const Navbar = () => {
                         <Link to="/">Overview</Link>
                     </li>
                     <li>
-                        <Link to="/ingest">Ingest</Link>
+                        <Link to="/upload">Ingest</Link>
                     </li>
                     <li>
-                        <Link to="/Access">Access</Link>
+                        <Link to="/browse">Access</Link>
                     </li>
                     <li>
-                        <Link to="/">Settings</Link>
+                        <Link to="/" ><i className="fas fa-cogs fa-lg"></i></Link>
                     </li>
-                    <li>
-                        <Link to="/">Logout</Link>
+                    <li className="logout">
+                        <Link to="/"><i className="fas fa-sign-out-alt fa-lg"></i></Link>
                     </li>
                 </ul>
             </div>

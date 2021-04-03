@@ -11,8 +11,8 @@ const Home = () => {
                 <div className="sidebar">
                     <nav className="sidebar_column">
                         <Sidebar />
-                        <Menu title={'DASHBOARD'} />
-                        <Menu title={'REPORTS'} />
+                        <Menu title={'DASHBOARD'} icon={"fas fa-tachometer-alt fa-2x"} />
+                        <Menu title={'REPORTS'} icon={"fas fa-file-contract  fa-2x"} />
                     </nav>                    
                 </div> 
                 <div className="content-section">

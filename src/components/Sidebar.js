@@ -1,10 +1,10 @@
 
 const Sidebar = () => {
-    const user = 'Alfredo';
+    const user = 'Alfredo Trujillo Leiva';
 
     return (
-        <nav className="sidebar_column">
-            <p className="welcome">WELCOME {user}</p>
+        <nav className="sidebar_menu">
+            <p className="welcome">WELCOME {user}</p> 
             <p className="power">Powered by ALFRTRUJ</p>           
         </nav>
       );

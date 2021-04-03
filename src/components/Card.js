@@ -1,6 +1,5 @@
-import react_icon from './react_logo.png';
 
-const Card = ( { value, legend } ) => {
+const Card = ( { value, legend, icon } ) => {
     return ( 
         <div className="card">
             <div className="card-items">
@@ -9,7 +8,7 @@ const Card = ( { value, legend } ) => {
                     <div className="legend">{ legend }</div>
                 </div>
                 <div className="card-icon">
-                    <img src={ react_icon } className="react_icon" alt="React logo"/>
+                    <i className={ icon }></i>
                 </div>
             </div>
         </div>
