@@ -1,15 +1,13 @@
-import { useParams } from "react-router";
 import Navbar from './Navbar';
 import SidebarAccess from './SidebarAccess';
-import Header from './Header';
+import Data from './Data';
 import useFetch from './useFetch';
-import Files from './Files';
+import Header from './Header';
 
-const Aip = () => {
-    const { id } = useParams();
-    const { data:aip } = useFetch('http://localhost:8000/aips/' + id);
-
-    return (        
+const OfflineBrowse = () => {
+    const { data: aips } = useFetch('http://localhost:8000/aips?_sort=id&_order=desc')    
+    
+    return (         
         <div className="content">
             <Navbar />             
             <div className="vertical-sections">
@@ -20,18 +18,13 @@ const Aip = () => {
                 </div> 
                 <div className="content-section">
                     <nav className="dashboard_column">
-                        <Header title={'BROWSE'} description={'Access your files'} icon={"fas fa-hdd fa-2x"} /> 
-                        { aip && <Files aip={aip} />} 
+                        <Header title={'OFFLINE BROWSE'} description={'Access your offline files'} icon={"fas fa-film fa-2x"} />  
+                        {aips && <Data aips={aips} />}                       
                     </nav>
                 </div> 
-            </div> 
-            
-        </div> 
-              
-    );
-        
-
- 
+            </div>          
+        </div>        
+     );
 }
  
-export default Aip;
+export default OfflineBrowse;

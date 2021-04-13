@@ -1,8 +1,6 @@
 import { Chart, Line, Point, Tooltip } from 'bizcharts';
 
 const Chart1 = ({ aips }) => {
-      
-    console.log(aips);
 
     return ( 
         <Chart 

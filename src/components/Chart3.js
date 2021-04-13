@@ -1,8 +1,6 @@
 import { PieChart } from 'bizcharts';
 
 const Chart3 = ({ aips }) => {
-      
-    console.log(aips);
 
     return ( 
         <PieChart

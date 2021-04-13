@@ -5,12 +5,12 @@ import Chart2 from './Chart2';
 import Chart3 from './Chart3';
 import useFetch from './useFetch';
 
-const Main = () => {   
+const Main = ({ title, description, icon }) => {   
     const { data: aips } = useFetch('http://localhost:8000/aips?_sort=size&_order=desc')   
 
     return (
         <nav className="dashboard_column">
-            <Header title={'DASHBOARD'} description={'Your stored information'} icon={"fas fa-tachometer-alt fa-2x"} />
+            <Header title={title} description={description} icon={icon} />
             <div className="row">
                 <Card value={78} legend={'ARCHIVAL PACKAGES STORED ON FILM'} icon={"far fa-file-archive fa-lg"} />
                 <Card value={450 + ' GB'} legend={'DATA STORED ON FILM'} icon={"fas fa-film fa-lg"} />

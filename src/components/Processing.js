@@ -1,9 +1,8 @@
 import Navbar from './Navbar';
 import SidebarIngest from './SidebarIngest';
 import Header from './Header';
-import AddAip from './AddAip';
 
-const Ingest = () => {
+const Processing = () => {
 
     return (        
         <div className="content">
@@ -11,13 +10,13 @@ const Ingest = () => {
             <div className="vertical-sections">
                 <div className="sidebar">
                     <nav className="sidebar_column">
-                        <SidebarIngest />                        
+                        <SidebarIngest />
                     </nav>
                 </div> 
                 <div className="content-section">
                     <nav className="dashboard_column">
-                        <Header title={'UPLOAD'} description={'Upload your files'} icon={"fas fa-upload fa-2x"}/> 
-                        <AddAip />                                                 
+                        <Header title={'PROCESSING'} description={'Processing your files'} icon={"fas fa-hourglass-half fa-2x"}/> 
+                                                                         
                     </nav>
                 </div> 
             </div>          
@@ -25,4 +24,4 @@ const Ingest = () => {
      );
 }
  
-export default Ingest;
+export default Processing;

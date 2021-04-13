@@ -1,7 +1,6 @@
 import Navbar from './Navbar';
-import Sidebar from './Sidebar';
+import SidebarOverview from './SidebarOverview';
 import Main from './Main';
-import Menu from './Menu';
 
 const Home = () => {
     return ( 
@@ -10,13 +9,11 @@ const Home = () => {
             <div className="vertical-sections">
                 <div className="sidebar">
                     <nav className="sidebar_column">
-                        <Sidebar />
-                        <Menu title={'DASHBOARD'} icon={"fas fa-tachometer-alt fa-2x"} />
-                        <Menu title={'REPORTS'} icon={"fas fa-file-contract  fa-2x"} />
+                        <SidebarOverview />
                     </nav>                    
                 </div> 
                 <div className="content-section">
-                    <Main />
+                    <Main title={'DASHBOARD'} description={'Your stored information'} icon={"fas fa-tachometer-alt fa-2x"}/>
                 </div> 
             </div>          
         </div>

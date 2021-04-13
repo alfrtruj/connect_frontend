@@ -14,7 +14,7 @@ html, body {
   background-color: #fff;
   padding: 10px 0 0 0;
   width: 100%;
-  height: 10%;
+  height: 5%;
   min-height: 80px;
 }
 .logo {
@@ -31,6 +31,7 @@ html, body {
 .navbar ul {
   display: flex;
   justify-content: flex-end;
+  list-style-type: none;
 }
 .links { 
   flex-grow: 1;
@@ -48,14 +49,16 @@ html, body {
 .links a:hover {
   color: #cc5d33;
 }
-
+.links .current {
+  color: #cc5d33;
+}
 /* Column sections */
 
 .vertical-sections {
   display: flex;
   flex-wrap: nowrap;
   width: 100%;
-  height: 90%;
+  height: 95%;
 }
 
 /* sidebar */
@@ -65,49 +68,52 @@ html, body {
   color: #fff;
   font-size: 0.7rem; 
   position: relative;
-  flex: 0 0 15%;
-}
-.sidebar_column {
-  display: flex;
-  flex-flow: column;
+  flex: 0 0 12%;
 }
 .sidebar_menu {
   display: flex;
   flex-flow: column;
-  padding: 0 10px 0 0;
 }
-nav .menu {
+div .row-options {
   display: flex;
   flex-flow: column;
-  justify-content: left;
-  margin: 0px;
-  padding-top: 5px;
-}
-nav .row-options {
-  display: flex;
-  align-items: center;
   flex-wrap: wrap;
-  margin: 0px;
-  padding: 10px 10px;
+  padding-inline-start: 0px;
 }
-nav .row-options:hover {
+div .menu {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 10px 0 10px 15px;
+  align-items: center;
+}
+div .menu:hover {
   background-color: #cc5d33;
 }
-nav ul{
-  list-style-type: none;
-  padding-inline-start: 0px;
+.row-options i {
+  flex: 0 0 15%;
 }
 .row-options .link {
   color: #fff;
   text-decoration: none;
   padding-left: 10px;  
+  flex: 0 0 85%;
+}
+.row-options .current {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 10px 0 10px 15px;
+  align-items: center;
+  background-color: #cc5d33;
 }
 .welcome {
   width: 100%;
-  padding: 16px 0 30px 10px; 
+  padding: 16px 10px 30px 15px; 
+}
+.wel {
+  margin-bottom: 0px;
 }
 .power {
-  padding: 16px 10px 10px 10px; 
+  padding: 16px 10px 10px 15px; 
   position: fixed;
   bottom: 0;
 }
@@ -118,7 +124,7 @@ nav ul{
 
   background-color: #e8e8e8;
   color:#808080;
-  flex: 0 0 85%;
+  flex: 0 0 88%;
   position: relative;
 
 }
@@ -271,23 +277,25 @@ table {
 }
 .pagination {
   display: flex;
-  justify-content: center;  
+  justify-content: center; 
 }
 .page-item {
   font-size: .8rem;  
 }
-.page-link {
-  color: #817d7b; 
+.page-link {  
+  color: rgb(153, 153, 153); 
   border-color: #c9c7c7;
   background-color: #ecebeb;
+  margin: 0 4px;
 }
-.page-link a:active {
+.page-item a:focus {
   background-color: #cc5d33;
   color: #fff;
+  box-shadow: none; 
 }
-.page-link a:hover:not(.active) {
+.page-link:hover {
   background-color: #cc5d33;
-  color: #fff;
+  color: #fff;  
 }
 .add_aip h2 {
   font-size: 15px;

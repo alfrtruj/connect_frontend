@@ -4,7 +4,19 @@ import react_logo from './react_logo.png';
 
 
 const Navbar = () => {
-    
+
+    // highlighting the navegation bar menu options when clicking
+    const url = document.URL;    
+    const setActiveMenu = (url) => {
+        const obj = document.getElementById("links").getElementsByTagName("a"); 
+        for (var i=0; i < obj.length; i++)
+        if(obj[i].href === url)
+            obj[i].className = "current";   
+    }
+    const setPage = () => {       
+        document.getElementById("links").addEventListener("click", setActiveMenu(url));
+    }    
+
     return (
         <nav className="navbar">
             <div>
@@ -13,16 +25,16 @@ const Navbar = () => {
             <div>
                 <img src={react_logo} className="react_logo" alt="React logo"/>
             </div>
-            <div className="links">
-                <ul>   
+            <div className="links" id="links">
+                <ul>
                     <li>
-                        <Link to="/">Overview</Link>
+                        <Link to="/dashboard" onMouseOver={setPage}>Overview</Link>
                     </li>
                     <li>
-                        <Link to="/upload">Ingest</Link>
+                        <Link to="/upload" onMouseOver={setPage}>Ingest</Link>
                     </li>
                     <li>
-                        <Link to="/browse">Access</Link>
+                        <Link to="/browse" onMouseOver={setPage}>Access</Link>
                     </li>
                     <li>
                         <Link to="/" ><i className="fas fa-cogs fa-lg"></i></Link>

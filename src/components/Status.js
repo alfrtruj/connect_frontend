@@ -1,9 +1,8 @@
 import Navbar from './Navbar';
 import SidebarIngest from './SidebarIngest';
 import Header from './Header';
-import AddAip from './AddAip';
 
-const Ingest = () => {
+const Status = () => {
 
     return (        
         <div className="content">
@@ -11,13 +10,12 @@ const Ingest = () => {
             <div className="vertical-sections">
                 <div className="sidebar">
                     <nav className="sidebar_column">
-                        <SidebarIngest />                        
+                        <SidebarIngest />
                     </nav>
                 </div> 
                 <div className="content-section">
                     <nav className="dashboard_column">
-                        <Header title={'UPLOAD'} description={'Upload your files'} icon={"fas fa-upload fa-2x"}/> 
-                        <AddAip />                                                 
+                        <Header title={'STATUS'} description={'Writing your Film'} icon={"fas fa-clipboard-check fa-2x"}/>                                                                         
                     </nav>
                 </div> 
             </div>          
@@ -25,4 +23,4 @@ const Ingest = () => {
      );
 }
  
-export default Ingest;
+export default Status;

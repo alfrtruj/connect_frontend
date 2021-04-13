@@ -4,7 +4,7 @@ const Header = ( {title, description, icon } ) => {
         <div className="page-header">
             <div className="title-row">
                 <div className="title">                    
-                    <i class={icon}></i>
+                    <i className={icon}></i>
                     <p className="title-text">{ title }</p>                        
                 </div>                
             </div>

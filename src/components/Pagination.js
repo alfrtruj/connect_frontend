@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 
-const Pagination = ({ aipPerPage, totalAips, paginate }) => {
+const Pagination = ({ itemPerPage, totalItems, paginate }) => {
     const pageNumbers = [];
 
-    for(let i = 1; i <= Math.ceil(totalAips / aipPerPage); i++) {
+    for(let i = 1; i <= Math.ceil(totalItems / itemPerPage); i++) {
         pageNumbers.push(i);
     }
-
+    
     return ( 
         <nav>
             <ul className="pagination">

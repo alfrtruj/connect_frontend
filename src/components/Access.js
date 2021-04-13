@@ -1,9 +1,8 @@
 import Navbar from './Navbar';
-import Sidebar from './Sidebar';
+import SidebarAccess from './SidebarAccess';
 import Data from './Data';
 import useFetch from './useFetch';
 import Header from './Header';
-import Menu from './Menu';
 
 const Access = () => {
     const { data: aips } = useFetch('http://localhost:8000/aips?_sort=id&_order=desc')    
@@ -14,9 +13,7 @@ const Access = () => {
             <div className="vertical-sections">
                 <div className="sidebar">
                     <nav className="sidebar_column">
-                        <Sidebar />
-                        <Menu title={'BROWSE'} icon={"fas fa-hdd fa-2x"} />
-                        <Menu title={'OFFLINE BROWSE'} icon={"fas fa-film fa-2x"} />
+                        <SidebarAccess />                        
                     </nav>
                 </div> 
                 <div className="content-section">
