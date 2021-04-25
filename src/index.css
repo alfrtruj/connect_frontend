@@ -243,7 +243,7 @@ table {
 }  
 .other_columns {
   border-bottom: 1px solid #dddddd;
-  text-align: center;
+  text-align: left;
   padding: 8px;
 }  
 .column_headers {

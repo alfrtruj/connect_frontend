@@ -21,9 +21,9 @@ function App() {
           <Route exact path="/dashboard">
             <Home />
           </Route>
-          <Route exact path="/browse">
-            <Access />
-          </Route>
+          <Route exact path="/browse" component={Access} />
+                      
+        
           <Route path="/browse/:id">
             <Aip />
           </Route>

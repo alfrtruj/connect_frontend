@@ -12,7 +12,7 @@ const AddAip = () => {
         e.preventDefault();
         const aip = { package_name, size, date, files };
         
-        fetch('http://localhost:8000/aips', {
+        fetch('http://localhost:5000/aips', {
             method: 'POST',
             headers: { "Content-type": "application/json" },
             body: JSON.stringify(aip)

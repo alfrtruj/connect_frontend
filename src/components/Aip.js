@@ -7,7 +7,7 @@ import Files from './Files';
 
 const Aip = () => {
     const { id } = useParams();
-    const { data:aip } = useFetch('http://localhost:8000/aips/' + id);
+    const { data:aip } = useFetch('http://localhost:5000/aips/' + id);
 
     return (        
         <div className="content">

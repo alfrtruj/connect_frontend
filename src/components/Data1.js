@@ -60,4 +60,4 @@ const Data = ({ aips }) => {
       );
 }
  
-export default Data;
+export default Data1;
