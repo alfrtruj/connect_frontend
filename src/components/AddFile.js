@@ -113,6 +113,7 @@ const AddFile = () => {
                     onChange={(e) => setFiletype(e.target.value)}
                 />
             </div>
+            <br/>
             <button onClick={AddFileInfo}>Add File</button>
             
         </div>

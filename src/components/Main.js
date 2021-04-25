@@ -1,12 +1,12 @@
 import Header from './Header';
 import Card from './Card';
-import Chart1 from './Chart1';
+/*import Chart1 from './Chart1';
 import Chart2 from './Chart2';
 import Chart3 from './Chart3';
-import useFetch from './useFetch';
+import useFetch from './useFetch'*/
 
 const Main = ({ title, description, icon }) => {   
-    const { data: aips } = useFetch('http://localhost:8000/aips?_sort=size&_order=desc')   
+    /*const { data: aips } = useFetch('http://localhost:8000/aips?_sort=size&_order=desc')   */
 
     return (
         <nav className="dashboard_column">
@@ -28,19 +28,19 @@ const Main = ({ title, description, icon }) => {
                 <div className="graph">
                     <div className="box">
                         <div className="graph-text">DATA INGESTED ON PIQLFILM</div> 
-                        {aips && <Chart1 aips={aips} />}   
+                        {/*{aips && <Chart1 aips={aips} />}   */}
                     </div>
                 </div>
                 <div className="graph">
                     <div className="box">
                         <div className="graph-text">DATA INGESTED ONLINE</div> 
-                        {aips && <Chart2 aips={aips} />}       
+                        {/*{aips && <Chart2 aips={aips} />}  */}     
                     </div>
                 </div>
                 <div className="graph">
                     <div className="box">
                         <div className="pie-text">ARCHIVAL FILE FORMATS</div>
-                        {aips && <Chart3 aips={aips} />}          
+                        {/*{aips && <Chart3 aips={aips} />}  */}        
                     </div>
                 </div>                
             </div>            

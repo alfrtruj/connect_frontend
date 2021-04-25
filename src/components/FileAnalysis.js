@@ -1,30 +1,28 @@
 import Navbar from './Navbar';
-import SidebarIngest from './SidebarIngest';
+import SidebarAccess from './SidebarAccess';
 import Header from './Header';
-/*import AddAip from './AddAip';*/
-import AddFile from './AddFile';
+import FileDetail from './FileDetail';
 
-const Ingest = () => {
+const FileAnalysis = () => {
 
-    return (        
+    return ( 
         <div className="content">
             <Navbar />             
             <div className="vertical-sections">
                 <div className="sidebar">
                     <nav className="sidebar_column">
-                        <SidebarIngest />                        
+                        <SidebarAccess />                        
                     </nav>
                 </div> 
                 <div className="content-section">
                     <nav className="dashboard_column">
-                        <Header title={'UPLOAD'} description={'Upload your files'} icon={"fas fa-upload fa-2x"}/> 
-                        {/*<AddAip />*/}
-                        <AddFile />                                                 
+                        <Header title={'FILE ANALYSIS'} description={'View your file'} icon={"fas fa-hdd fa-2x"} />  
+                        <FileDetail />                     
                     </nav>
                 </div> 
             </div>          
-        </div>       
+        </div>     
      );
 }
  
-export default Ingest;
+export default FileAnalysis;

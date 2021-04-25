@@ -1,6 +1,6 @@
-import { useState } from 'react';
+/*import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Pagination from './Pagination';
+import Pagination from '../Pagination';
 
 const Files = ({aip}) => {
     
@@ -45,4 +45,4 @@ const Files = ({aip}) => {
     ); 
 }
  
-export default Files;
+export default Files;*/

@@ -1,7 +1,7 @@
 import Navbar from './Navbar';
 import SidebarAccess from './SidebarAccess';
-import Data from './Data';
-import useFetch from './useFetch';
+/*import Data from './To delete/Data';
+import useFetch from './useFetch';*/
 import Header from './Header';
 import ShowFiles from './ShowFiles';
 

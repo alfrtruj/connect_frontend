@@ -1,13 +1,15 @@
 import Home from './components/Home';
 import Access from './components/Access';
 import Ingest from './components/Ingest';
-import Aip from './components/Aip';
+/*import Aip from './components/Aip';*/
+import UpdateFile from './components/UpdateFile';
 import Reports from './components/Reports';
 import Processing from './components/Processing';
 import OfflineStorage from './components/OfflineStorage';
 import Status from './components/Status';
 import OfflineBrowse from './components/OfflineBrowse';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import FileAnalysis from './components/FileAnalysis';
 
 
 function App() {
@@ -21,12 +23,9 @@ function App() {
           <Route exact path="/dashboard">
             <Home />
           </Route>
-          <Route exact path="/browse" component={Access} />
-                      
-        
-          <Route path="/browse/:id">
-            <Aip />
-          </Route>
+          <Route exact path="/browse" component={Access} />  
+          <Route exact path="/browse/:id" component={FileAnalysis} />
+          <Route exact path="/browse/:id/update" component={UpdateFile} />
           <Route path="/upload">
             <Ingest />
           </Route>

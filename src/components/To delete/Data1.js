@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import Pagination from './Pagination';
+import Pagination from '../Pagination';
 
 const Data = ({ aips }) => {    
      
@@ -60,4 +60,4 @@ const Data = ({ aips }) => {
       );
 }
  
-export default Data;
+export default Data1;

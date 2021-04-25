@@ -1,7 +1,7 @@
-import { useParams } from "react-router";
-import Navbar from './Navbar';
-import SidebarAccess from './SidebarAccess';
-import Header from './Header';
+/*import { useParams } from "react-router";
+import Navbar from '../Navbar';
+import SidebarAccess from '../SidebarAccess';
+import Header from '../Header';
 import useFetch from './useFetch';
 import Files from './Files';
 
@@ -34,4 +34,4 @@ const Aip = () => {
  
 }
  
-export default Aip;
+export default Aip;*/
