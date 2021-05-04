@@ -32,7 +32,9 @@ const SidebarAccess = () => {
                     </li>
                 </ul>       
             </div>                      
-            <p className="power">Powered by ALFRTRUJ</p>           
+            <div >
+                <p className="power">Powered by ALFRTRUJ</p>   
+            </div>        
         </nav>
     );
 }

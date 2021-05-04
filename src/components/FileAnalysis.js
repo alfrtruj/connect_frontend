@@ -16,7 +16,7 @@ const FileAnalysis = () => {
                 </div> 
                 <div className="content-section">
                     <nav className="dashboard_column">
-                        <Header title={'FILE ANALYSIS'} description={'View your file'} icon={"fas fa-hdd fa-2x"} />  
+                        <Header title={'FILE ANALYSIS'} description={'View your file information'} icon={"fas fa-hdd fa-2x"} />  
                         <FileDetail />                     
                     </nav>
                 </div> 

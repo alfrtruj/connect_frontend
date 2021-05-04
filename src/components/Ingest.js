@@ -1,7 +1,6 @@
 import Navbar from './Navbar';
 import SidebarIngest from './SidebarIngest';
 import Header from './Header';
-/*import AddAip from './AddAip';*/
 import AddFile from './AddFile';
 
 const Ingest = () => {
@@ -18,7 +17,6 @@ const Ingest = () => {
                 <div className="content-section">
                     <nav className="dashboard_column">
                         <Header title={'UPLOAD'} description={'Upload your files'} icon={"fas fa-upload fa-2x"}/> 
-                        {/*<AddAip />*/}
                         <AddFile />                                                 
                     </nav>
                 </div> 

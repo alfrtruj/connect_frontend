@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 const Pagination = ({ itemPerPage, totalItems, paginate }) => {
+
     const pageNumbers = [];
 
     for(let i = 1; i <= Math.ceil(totalItems / itemPerPage); i++) {

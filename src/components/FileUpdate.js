@@ -1,13 +1,11 @@
 import Navbar from './Navbar';
 import SidebarAccess from './SidebarAccess';
-/*import Data from './To delete/Data';*/
-/*import useFetch from './useFetch';*/
 import Header from './Header';
-import ShowFiles from './ShowFiles';
+import UpdateFile from './UpdateFile';
 
-const Access = () => {    
-    
-    return (         
+const FileUpdate = () => {
+
+    return ( 
         <div className="content">
             <Navbar />             
             <div className="vertical-sections">
@@ -18,13 +16,13 @@ const Access = () => {
                 </div> 
                 <div className="content-section">
                     <nav className="dashboard_column">
-                        <Header title={'BROWSE'} description={'Access your files'} icon={"fas fa-hdd fa-2x"} /> 
-                        <ShowFiles />                     
+                        <Header title={'FILE UPDATE'} description={'Update your file'} icon={"fas fa-hdd fa-2x"} /> 
+                        <UpdateFile />                     
                     </nav>
                 </div> 
             </div>          
-        </div>        
+        </div>     
      );
 }
  
-export default Access;
+export default FileUpdate;

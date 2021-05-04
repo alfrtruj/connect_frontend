@@ -28,28 +28,27 @@ const AddFile = () => {
         if(thumbnail !== null) {
             formField.append('thumbnail', thumbnail)
         }
-
         await axios({
             method: 'post',
             url: 'http://localhost:8000/api/',
             data: formField
         }).then((response) => {
             console.log(response.data);
-            history.push('/upload')
+            history.push('/browse')
         })
 
     }
 
     return ( 
-        <div className="add_aip">
+        <div className="add_file">
             <h2>Add a new file</h2>
             <div className="form-group">                    
                 <label> Select a file:</label>
                 <img src={thumbnail} alt=""/>
                 <input 
                     type="file"
-                    required
                     name="thumbnail"
+                    required
                     onChange={(e) => setThumbnail(e.target.files[0])}
                 />
             </div>

@@ -1,57 +1,56 @@
 import axios from 'axios';
 import {useState, useEffect} from 'react';
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const FileDetail = () => {
 
     const [file, setFile] = useState("")
-
-    const { id } = useParams();
-
-    const getSingleFile = async () => {
-        const { data } = await axios.get(`http://localhost:8000/api/${id}`)
-        console.log(data)
-        setFile(data)
-    }
+    const { id } = useParams();    
 
     useEffect(() => {
+        const getSingleFile = async () => {
+            const { data } = await axios.get(`http://localhost:8000/api/${id}/`)
+            console.log(data)
+            setFile(data)
+        }
         getSingleFile();
-    }, [])
+    }, [id])
 
     return ( 
-        <div className="add_aip">
-            <h2>File Details</h2>
-            <div className="form-group">                    
-                <label> file:</label>
+        <div className="add_aip">                 
+            <label className="file_preview"> Preview:</label>            
+            <img className="scale" src={ file.thumbnail } alt=""/> 
+                      
+            <div className="details">
                 <br/>
-                <img className="name" src={ file.thumbnail } alt="" height="315" width="600"/>                
-            </div>
-            <div className="form-group"> 
-                <label> Filename:</label> 
-                <h5 className="other_columns">{ file.filename }</h5>
-            </div>
-            <div className="form-group"> 
-                <label> Description:</label>
-                <h5 className="other_columns">{ file.description }</h5>
-            </div>
-            <div className="form-group"> 
-                <label> AIP Package Name:</label>
-                <h5 className="other_columns">{ file.aippackage }</h5>
-            </div>
-            <div className="form-group"> 
-                <label> Size:</label>
-                <h5 className="other_columns">{ file.size }</h5>
-            </div>
-            <div className="form-group"> 
-                <label> Date:</label>
-                <h5 className="other_columns">{ file.date }</h5>
-            </div>
-            <div className="form-group"> 
-                <label> File type:</label>
-                <h5 className="other_columns">{ file.filetype }</h5>
-            </div>
-            <br/>
-            <button>Update file</button>
+                <div> 
+                    <label> Filename:</label> 
+                    <h6 className="other_columns">{ file.filename }</h6>
+                </div>
+                <div> 
+                    <label> Description:</label>
+                    <h6 className="other_columns">{ file.description }</h6>
+                </div>
+                <div> 
+                    <label> AIP Package Name:</label>
+                    <h6 className="other_columns">{ file.aippackage }</h6>
+                </div>
+                <div> 
+                    <label> Size:</label>
+                    <h6 className="other_columns">{ file.size }</h6>
+                </div>
+                <div> 
+                    <label> Date:</label>
+                    <h6 className="other_columns">{ file.date }</h6>
+                </div>
+                <div> 
+                    <label> File type:</label>
+                    <h6 className="other_columns">{ file.filetype }</h6>
+                </div>
+                <br/>
+                <button><Link to={`/browse/${file.id}/update`}>Update file</Link></button>
+            </div>            
             
         </div>
      );

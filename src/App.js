@@ -1,8 +1,6 @@
 import Home from './components/Home';
 import Access from './components/Access';
 import Ingest from './components/Ingest';
-/*import Aip from './components/Aip';*/
-import UpdateFile from './components/UpdateFile';
 import Reports from './components/Reports';
 import Processing from './components/Processing';
 import OfflineStorage from './components/OfflineStorage';
@@ -10,7 +8,9 @@ import Status from './components/Status';
 import OfflineBrowse from './components/OfflineBrowse';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import FileAnalysis from './components/FileAnalysis';
-
+import FileUpdate from './components/FileUpdate';
+import Logout from './components/Logout';
+import Login from './components/Login';
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
           </Route>
           <Route exact path="/browse" component={Access} />  
           <Route exact path="/browse/:id" component={FileAnalysis} />
-          <Route exact path="/browse/:id/update" component={UpdateFile} />
+          <Route exact path="/browse/:id/update" component={FileUpdate} />
           <Route path="/upload">
             <Ingest />
           </Route>
@@ -44,6 +44,8 @@ function App() {
           <Route path="/offlinebrowse">
             <OfflineBrowse />
           </Route>
+          <Route exact path="/logout" component={Logout} />
+          <Route exact path="/login" component={Login} />
         </Switch>        
       </div>
     </Router>    

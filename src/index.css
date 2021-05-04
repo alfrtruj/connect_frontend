@@ -3,6 +3,7 @@ html, body {
   margin: 0; 
   height: 100%;
 }
+
 .content {
   height: 100vh;
 }
@@ -12,21 +13,17 @@ html, body {
   display: flex;
   flex-wrap: nowrap;
   background-color: #fff;
-  padding: 10px 0 0 0;
   width: 100%;
   height: 5%;
-  min-height: 80px;
 }
 .logo {
   margin-left: 10px;
-  padding-left: 20px;
-  padding-bottom: 30px;
+  padding: 10px 0 30px 20px;
 }
 .react_logo {
   width: 70px;
   height: 70px;
-  padding-left: 20px;
-  padding-bottom: 30px;
+  padding: 10px 0 30px 20px;
 }
 .navbar ul {
   display: flex;
@@ -77,7 +74,7 @@ html, body {
 div .row-options {
   display: flex;
   flex-flow: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   padding-inline-start: 0px;
 }
 div .menu {
@@ -95,7 +92,8 @@ div .menu:hover {
 .row-options .link {
   color: #fff;
   text-decoration: none;
-  padding-left: 10px;  
+  padding-left: 10px;
+  padding-right: 10px;  
   flex: 0 0 85%;
 }
 .row-options .current {
@@ -114,6 +112,7 @@ div .menu:hover {
 }
 .power {
   padding: 16px 10px 10px 15px; 
+  margin-bottom: 20px;
   position: fixed;
   bottom: 0;
 }
@@ -238,8 +237,8 @@ table {
 }
 .name {
   border-bottom: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
+  justify-items: center;
+  padding: 4px;
 }  
 .other_columns {
   border-bottom: 1px solid #dddddd;
@@ -297,6 +296,22 @@ table {
   background-color: #cc5d33;
   color: #fff;  
 }
+.add_aip {
+  display: flex;
+  flex-wrap: wrap;
+}
+.file_preview {
+  width: 100%;
+}
+.scale {
+  padding: 5px 20px 10px 0;
+  width: 70%;
+  max-height: 80vh;
+  object-fit: scale-down;
+}
+.details {
+  padding-left: 20px;
+}
 .add_aip h2 {
   font-size: 15px;
   color: #cc5d33;
@@ -323,7 +338,139 @@ table {
   border-radius: 8px;
   cursor: pointer;
 }
+.add_aip button a{
+  text-decoration: none;
+  color: #fff;
+}
 .aip-details {
   font-size: 0.8rem;
   color: #cc5d33;
+}
+.thumb {
+  max-width: 70px;
+  height: 50px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}
+.add_file h2 {
+  font-size: 15px;
+  color: #cc5d33;
+  margin-bottom: 30px;
+}
+.add_file label {
+  font-size: 14px;
+}
+.add_file input {
+  width: 100%;
+  font-size: 0.8rem;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.add_file button {
+  background: #cc5d33;
+  font-size: 14px;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.add_file button a{
+  text-decoration: none;
+  color: #fff;
+}
+.update label {
+  font-size: 14px;
+}
+.update input {
+  width: 100%;
+  font-size: 0.8rem;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.update button {
+  background: #cc5d33;
+  font-size: 14px;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.update button a{
+  text-decoration: none;
+  color: #fff;
+}
+.logout {
+  background-color: #e7e0dd;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  padding: 400px 0;
+  color: #808080;  
+}
+.logout a {
+  background-color: #cc5d33;
+  border-color: #cc5d33;
+}
+.logout a:hover {
+  background-color: #cc5d33;
+  border-color: #cc5d33;
+}
+.logout a:active {
+  background-color: #cc5d33;
+  border-color: #cc5d33;
+}
+.logout h2 {
+  font-weight: bold;
+}
+.login {
+  background-color: #999897;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  padding: 400px 300px;
+  color: #808080;  
+}
+.login a {
+  background-color: #cc5d33;
+  border-color: #cc5d33;
+}
+.login a:hover {
+  background-color: #cc5d33;
+  border-color: #cc5d33;
+}
+.login a:active {
+  background-color: #cc5d33;
+  border-color: #cc5d33;
+}
+.container {
+  background-color: #fff;
+  padding: 40px;
+  font-size: 15px;  
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  height: 32vh;
+  border-radius: .35rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
+}
+.container a {
+  margin-bottom: 20px;
+}
+.remember {
+  font-size: 12px;
+}
+.logon {
+  padding-bottom: 20px;
+  padding-top: 15px;
 }
