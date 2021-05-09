@@ -10,7 +10,7 @@ const FileDetail = () => {
 
     useEffect(() => {
         const getSingleFile = async () => {
-            const { data } = await axios.get(`http://localhost:8000/api/${id}/`)
+            const { data } = await axios.get(`http://localhost:8000/api/files/${id}/`)
             console.log(data)
             setFile(data)
         }

@@ -10,7 +10,7 @@ const ShowFiles = () => {
 
     /* when refreshing the list, claims every child in the list should have a unique "key" */
     const getFiles = async () => {
-        const response = await axios.get('http://localhost:8000/api/')
+        const response = await axios.get('http://localhost:8000/api/files')
         setFiles(response.data)
     }
 
@@ -33,7 +33,7 @@ const ShowFiles = () => {
     
 
     const deleteFile = async (id) => {
-       await axios.delete(`http://localhost:8000/api/${id}/`)
+       await axios.delete(`http://localhost:8000/api/files/${id}/`)
        history.go()
        history.push('/browse')
     }

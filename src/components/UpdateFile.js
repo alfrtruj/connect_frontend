@@ -18,7 +18,7 @@ const UpdateFile = () => {
     
     useEffect(() => {
         const loadFile = async () => {
-            const { data } = await axios.get(`http://localhost:8000/api/${id}/`)
+            const { data } = await axios.get(`http://localhost:8000/api/files/${id}/`)
             console.log(data)
             setThumbnail(data.thumbnail)
             console.log(data.thumbnail)
@@ -50,7 +50,7 @@ const UpdateFile = () => {
     
         await axios({
             method: 'PUT',
-            url: `http://localhost:8000/api/${id}/`,
+            url: `http://localhost:8000/api/files/${id}/`,
             data: formField
         }).then((response) => {
             console.log(response.data);

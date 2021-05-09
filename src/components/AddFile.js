@@ -30,7 +30,7 @@ const AddFile = () => {
         }
         await axios({
             method: 'post',
-            url: 'http://localhost:8000/api/',
+            url: 'http://localhost:8000/api/files/',
             data: formField
         }).then((response) => {
             console.log(response.data);
